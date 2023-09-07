@@ -9,13 +9,7 @@ const questions = [
         text: "What's your email please?",
         input: true
     },
-    {
-        text: "You already have a sales process?",
-        answers: [
-            { text: "No", nextQuestion: -1, result: "Your PROBLEM is you have no system in place" },
-            { text: "Yes", nextQuestion: 3 }
-        ]
-    },
+ 
     // ... [Rest of the questions remain unchanged]
 
         {
