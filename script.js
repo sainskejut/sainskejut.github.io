@@ -135,6 +135,10 @@ function handleBack() {
     const answerRecord = document.getElementById("answer-record");
     answerRecord.removeChild(answerRecord.lastChild);
 
+       // Remove the last result
+    const result = document.getElementById("result");
+    result.removeChild(result.lastChild);
+
     // Navigate to the previous question
     currentQuestion--;
     displayQuestion();
