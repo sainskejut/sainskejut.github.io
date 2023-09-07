@@ -68,16 +68,6 @@ function displayQuestion() {
     document.getElementById("question-container").innerHTML = html;
 }
 
-//function handleAnswer(index) {
-//    const answer = questions[currentQuestion].answers[index];
-//    if (answer.nextQuestion === -1) {
-//        document.getElementById("result").innerText = answer.result;
- //       document.getElementById("question-container").innerHTML = "";
-//   } else {
-//        currentQuestion = answer.nextQuestion;
-//        displayQuestion();
-//    }
-//}
 
 function handleAnswer(index) {
     const answer = questions[currentQuestion].answers[index];
