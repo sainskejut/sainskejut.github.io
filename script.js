@@ -1,4 +1,6 @@
-let currentQuestion = 0;
+let currentQuestion = 2; // Start from the sales-related questions
+let userName = "";
+let userEmail = "";
 
 const questions = [
     {
@@ -10,8 +12,6 @@ const questions = [
         input: true
     },
  
-    // ... [Rest of the questions remain unchanged]
-
         {
         text: "You already have a sales process?",
         answers: [
