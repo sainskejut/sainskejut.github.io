@@ -30,28 +30,28 @@ const questions = [
     {
         text: "Have more than 10 appointments?",
         answers: [
-            { text: "No", nextQuestion: -1, result: "Your PROBLEM is No follow up" },
+            { text: "No", nextQuestion: -1, result: "Your PROBLEM is No follow up, SOLUTION is to have a follow up system in place" },
             { text: "Yes", nextQuestion: 5 }
         ]
     },
     {
-        text: "Closing?",
+        text: "Are you making some sales closing?",
         answers: [
             { text: "No", nextQuestion: 6 },
-            { text: "Yes", nextQuestion: -1, result: "Your PROBLEM is You are the bottleneck. Solution = replace yourself and scale." }
+            { text: "Yes", nextQuestion: -1, result: "Ok good, but if you got tired, SOLUTION is to recruit more salesperson to replace or replicate yourself, and scale up sales from here. Wow!" }
         ]
     },
     {
         text: "Have more than 20 appointments?",
         answers: [
-            { text: "No", nextQuestion: -1, result: "Your PROBLEM is No follow up" },
+            { text: "No", nextQuestion: -1, result: "Your PROBLEM is No follow up, SOLUTION is to have a follow up system in place" },
             { text: "Yes", nextQuestion: 7 }
         ]
     },
     {
         text: "Money rejection?",
         answers: [
-            { text: "No", nextQuestion: -1, result: "Your PROBLEM is you are the bottleneck or you got tired. SOLUTION is to recruit more salesperson to replace or replicate yourself, and scale up sales from here. Wow!" },
+            { text: "No", nextQuestion: -1, result: "Your PROBLEM is closing. SOLUTION is to tweak your sales closing approach." },
             { text: "Yes", nextQuestion: 8 }
         ]
     },
@@ -66,7 +66,7 @@ const questions = [
         text: "Low or high sales?",
         answers: [
             { text: "Low", nextQuestion: -1, result: "Your PROBLEM is filtering leads. SOLUTION is to tweak your lead filtering so you get better qualified leads." },
-            { text: "High", nextQuestion: -1, result: "Your PROBLEM is you are the bottleneck or you got tired. SOLUTION is to recruit more salesperson to replace or replicate yourself, and scale up sales from here. Wow!" }
+            { text: "High", nextQuestion: -1, result: "What, you want more sales? Good. Your PROBLEM is you are the bottleneck or you got tired. SOLUTION is to recruit more salesperson to replace or replicate yourself, and scale up sales from here. Wow!" }
         ]
     }
 ];
