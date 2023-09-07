@@ -11,16 +11,16 @@ const questions = [
         text: "What's your email please?",
         input: true
     },
- 
-        {
+    {
         text: "You already have a sales process?",
         answers: [
             { text: "No", nextQuestion: -1, result: "Your PROBLEM is you have no system in place" },
-            { text: "Yes", nextQuestion: 3 }
+            { text: "Yes", nextQuestion: 4 }
         ]
     },
-    
-    {
+    // ... [Rest of your questions here]
+
+      {
         text: "Getting over 300 opt in?",
         answers: [
             { text: "No", nextQuestion: -1, result: "Your PROBLEM is Not enough data, so your SOLUTION is to nail down offer and close, so testing has greater chance of success, then send more traffic." },
@@ -95,10 +95,14 @@ function handleTextInput() {
         return;
     }
     
-    // Record the input
-    const recordDiv = document.createElement("div");
-    recordDiv.innerText = questions[currentQuestion].text + ": " + userInput;
-    document.getElementById("answer-record").appendChild(recordDiv);
+    if (currentQuestion === 0) {
+        userName = userInput;
+    } else if (currentQuestion === 1) {
+        userEmail = userInput;
+    }
+
+    // Display name and email in the result area
+    document.getElementById("result").innerText = `Name: ${userName}\nEmail: ${userEmail}`;
     
     currentQuestion++;
     displayQuestion();
@@ -113,7 +117,7 @@ function handleAnswer(index) {
     document.getElementById("answer-record").appendChild(recordDiv);
     
     if (answer.nextQuestion === -1) {
-        document.getElementById("result").innerText = answer.result;
+        document.getElementById("result").innerText += "\n\n" + answer.result;
         document.getElementById("question-container").innerHTML = "";
     } else {
         currentQuestion = answer.nextQuestion;
@@ -121,10 +125,25 @@ function handleAnswer(index) {
     }
 }
 
+function handleBack() {
+    if (currentQuestion <= 2) {
+        alert("You're at the first question.");
+        return;
+    }
+
+    // Remove the last recorded answer
+    const answerRecord = document.getElementById("answer-record");
+    answerRecord.removeChild(answerRecord.lastChild);
+
+    // Navigate to the previous question
+    currentQuestion--;
+    displayQuestion();
+}
+
 document.getElementById("reset-btn").addEventListener("click", function() {
-    currentQuestion = 0;
+    currentQuestion = 2; // Restart from the sales-related questions
     document.getElementById("answer-record").innerHTML = "";
-    document.getElementById("result").innerText = "";
+    document.getElementById("result").innerText = `Name: ${userName}\nEmail: ${userEmail}`;
     displayQuestion();
 });
 
@@ -156,3 +175,4 @@ const formattedDate = currentDate.toLocaleDateString() + " " + currentDate.toLoc
 document.getElementById("current-date-time").innerText = formattedDate;
 
 displayQuestion();
+
