@@ -1,4 +1,4 @@
-let currentQuestion = 2; // Start from the sales-related questions
+let currentQuestion = 0; // Start from the sales-related questions
 let userName = "";
 let userEmail = "";
 
@@ -15,7 +15,7 @@ const questions = [
         text: "You already have a sales process?",
         answers: [
             { text: "No", nextQuestion: -1, result: "Your PROBLEM is you have no system in place" },
-            { text: "Yes", nextQuestion: 4 }
+            { text: "Yes", nextQuestion: 3 }
         ]
     },
     // ... [Rest of your questions here]
