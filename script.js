@@ -17,6 +17,64 @@ const questions = [
         ]
     },
     // ... [Rest of the questions remain unchanged]
+
+        {
+        text: "You already have a sales process?",
+        answers: [
+            { text: "No", nextQuestion: -1, result: "Your PROBLEM is you have no system in place" },
+            { text: "Yes", nextQuestion: 3 }
+        ]
+    },
+    
+    {
+        text: "Getting over 300 opt in?",
+        answers: [
+            { text: "No", nextQuestion: -1, result: "Your PROBLEM is Not enough data, so your SOLUTION is to nail down offer and close, so testing has greater chance of success, then send more traffic." },
+            { text: "Yes", nextQuestion: 4 }
+        ]
+    },
+    {
+        text: "Have more than 10 appointments?",
+        answers: [
+            { text: "No", nextQuestion: -1, result: "Your PROBLEM is No follow up" },
+            { text: "Yes", nextQuestion: 5 }
+        ]
+    },
+    {
+        text: "Closing?",
+        answers: [
+            { text: "No", nextQuestion: 6 },
+            { text: "Yes", nextQuestion: -1, result: "Your PROBLEM is You are the bottleneck. Solution = replace yourself and scale." }
+        ]
+    },
+    {
+        text: "Have more than 20 appointments?",
+        answers: [
+            { text: "No", nextQuestion: -1, result: "Your PROBLEM is No follow up" },
+            { text: "Yes", nextQuestion: 7 }
+        ]
+    },
+    {
+        text: "Money rejection?",
+        answers: [
+            { text: "No", nextQuestion: -1, result: "Your PROBLEM is you are the bottleneck or you got tired. SOLUTION is to recruit more salesperson to replace or replicate yourself, and scale up sales from here. Wow!" },
+            { text: "Yes", nextQuestion: 8 }
+        ]
+    },
+    {
+        text: "Have sales?",
+        answers: [
+            { text: "No", nextQuestion: -1, result: "Your PROBLEM is closing. SOLUTION is to tweak your sales closing approach." },
+            { text: "Yes", nextQuestion: 9 }
+        ]
+    },
+    {
+        text: "Low or high sales?",
+        answers: [
+            { text: "Low", nextQuestion: -1, result: "Your PROBLEM is filtering leads. SOLUTION is to tweak your lead filtering so you get better qualified leads." },
+            { text: "High", nextQuestion: -1, result: "Your PROBLEM is you are the bottleneck or you got tired. SOLUTION is to recruit more salesperson to replace or replicate yourself, and scale up sales from here. Wow!" }
+        ]
+    }
 ];
 
 function displayQuestion() {
