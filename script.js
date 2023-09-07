@@ -1,31 +1,48 @@
 let currentQuestion = 0;
 
 const questions = [
-    {
-        text: "Have sales process?",
+  {
+        text: "Hi, whats your name?",
         answers: [
-            { text: "No", nextQuestion: -1, result: "Your PROBLEM is No system in place" },
-            { text: "Yes", nextQuestion: 1 }
+            { text: "Are you kidding?", nextQuestion: -1, result: "Please Tell Whats Your Name" },
+            { text: "Submit", nextQuestion: 1 }
         ]
     },
+
+{
+        text: "Whats your email please?",
+        answers: [
+            { text: "No no i dont want", nextQuestion: -1, result: "Please Write Your Email" },
+            { text: "Submit", nextQuestion: 2 }
+        ]
+    },
+        
+    {
+        text: "You already have a sales process?",
+        answers: [
+            { text: "No", nextQuestion: -1, result: "Your PROBLEM is you have no system in place" },
+            { text: "Yes", nextQuestion: 3 }
+        ]
+    },
+    
     {
         text: "Getting over 300 opt in?",
         answers: [
             { text: "No", nextQuestion: -1, result: "Your PROBLEM is Not enough data, so your SOLUTION is to nail down offer and close, so testing has greater chance of success, then send more traffic." },
-            { text: "Yes", nextQuestion: 2 }
+            { text: "Yes", nextQuestion: 4 }
         ]
     },
     {
         text: "Have more than 10 appointments?",
         answers: [
             { text: "No", nextQuestion: -1, result: "Your PROBLEM is No follow up" },
-            { text: "Yes", nextQuestion: 3 }
+            { text: "Yes", nextQuestion: 5 }
         ]
     },
     {
         text: "Closing?",
         answers: [
-            { text: "No", nextQuestion: 4 },
+            { text: "No", nextQuestion: 6 },
             { text: "Yes", nextQuestion: -1, result: "Your PROBLEM is You are the bottleneck. Solution = replace yourself and scale." }
         ]
     },
@@ -33,21 +50,21 @@ const questions = [
         text: "Have more than 20 appointments?",
         answers: [
             { text: "No", nextQuestion: -1, result: "Your PROBLEM is No follow up" },
-            { text: "Yes", nextQuestion: 5 }
+            { text: "Yes", nextQuestion: 7 }
         ]
     },
     {
         text: "Money rejection?",
         answers: [
             { text: "No", nextQuestion: -1, result: "Your PROBLEM is you are the bottleneck or you got tired. SOLUTION is to recruit more salesperson to replace or replicate yourself, and scale up sales from here. Wow!" },
-            { text: "Yes", nextQuestion: 6 }
+            { text: "Yes", nextQuestion: 8 }
         ]
     },
     {
         text: "Have sales?",
         answers: [
             { text: "No", nextQuestion: -1, result: "Your PROBLEM is closing. SOLUTION is to tweak your sales closing approach." },
-            { text: "Yes", nextQuestion: 7 }
+            { text: "Yes", nextQuestion: 9 }
         ]
     },
     {
